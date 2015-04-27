@@ -9,7 +9,12 @@ function! buffer_history#add(bufnr) abort "{{{1
   endif
 
   let index = w:buffer_history_index + 1
-  if bufexists(a:bufnr) && get(w:buffer_history, index-1, -1) != a:bufnr
+  if bufexists(a:bufnr)
+    let bindex = index(w:buffer_history, a:bufnr)
+    if bindex >= 0
+      let index -= 1
+      call remove(w:buffer_history, bindex)
+    endif
     let w:buffer_history_index = index
     call insert(w:buffer_history, a:bufnr, index)
   endif
