@@ -1,5 +1,5 @@
-# VIM Buffer History 0.0.1
-A vim plugin to maintain a buffer jump history per window
+# VIM Buffer History 0.0.2
+A vim plugin to maintain a MRU buffer jump history per window
 
 ## Credits
 
