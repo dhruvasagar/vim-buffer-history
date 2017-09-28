@@ -18,7 +18,12 @@ nnoremap <silent> <Plug>(buffer-history-list) :BufferHistoryList<CR>
 nnoremap <silent> <Plug>(buffer-history-back) :BufferHistoryBack<CR>
 nnoremap <silent> <Plug>(buffer-history-forward) :BufferHistoryForward<CR>
 
-if !exists('g:buffer_history_disable_mappings')
+if !hasmapto('<Plug>(buffer-history-list)')
+  nmap gbl <Plug>(buffer-history-list)
+endif
+if !hasmapto('<Plug>(buffer-history-back)')
   nmap gbp <Plug>(buffer-history-back)
+endif
+if !hasmapto('<Plug>(buffer-history-forward)')
   nmap gbn <Plug>(buffer-history-forward)
 endif
