@@ -9,7 +9,7 @@ function! buffer_history#add(bufnr) abort "{{{1
   endif
 
   let bufinfo = getbufinfo(a:bufnr)[0]
-  if bufinfo['hidden'] || !bufinfo['listed'] | return | endif
+  if !bufinfo['listed'] || empty(trim(bufname(a:bufnr))) | return | endif
 
   let index = w:buffer_history_index + 1
   if bufexists(a:bufnr)
@@ -25,6 +25,12 @@ endfunction
 
 function! buffer_history#remove(bufnr) abort "{{{1
   if !exists('w:buffer_history') | return | endif
+
+  if a:bufnr ==# -1
+    let w:buffer_history = []
+    let w:buffer_history_index = -1
+    return
+  endif
 
   call filter(w:buffer_history, 'v:val !=# a:bufnr')
   if w:buffer_history_index >= len(w:buffer_history)
