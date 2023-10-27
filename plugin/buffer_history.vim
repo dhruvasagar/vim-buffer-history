@@ -6,7 +6,7 @@ let g:loaded_buffer_history = 1
 augroup BufferHistory
   au!
 
-  autocmd BufRead * call buffer_history#add(winbufnr(0))
+  autocmd BufWinEnter * call buffer_history#add(winbufnr(0))
   autocmd BufWipeout * call buffer_history#remove(bufnr('<afile>'))
 augroup END
 
