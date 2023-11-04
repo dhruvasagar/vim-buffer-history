@@ -1,4 +1,4 @@
-# VIM Buffer History 0.0.5
+# VIM Buffer History 1.0.0
 
 A vim plugin to maintain a MRU buffer jump history per window
 
