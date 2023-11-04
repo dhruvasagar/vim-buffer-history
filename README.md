@@ -20,9 +20,9 @@ Buffer History provides the following vim commands :
 
 These are also available as the following plug mappings :
 
-- `<Plug>(buffer-history-list)`: Set to <kbd>gbl<kbd> by default
-- `<Plug>(buffer-history-back)`: Set to <kbd>gbp<kbd> by default
-- `<Plug>(buffer-history-forward)`: Set to <kbd>gbn<kbd> by default
+- `<Plug>(buffer-history-list)`: Set to <kbd>gbl</kbd> by default
+- `<Plug>(buffer-history-back)`: Set to <kbd>gbp</kbd> by default
+- `<Plug>(buffer-history-forward)`: Set to <kbd>gbn</kbd> by default
 
 You can override these mappings by setting them in your vim configurations
 
