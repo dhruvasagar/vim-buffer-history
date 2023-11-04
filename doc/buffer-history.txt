@@ -1,0 +1,84 @@
+*buffer-history.txt*                                   Buffer History Per Window
+================================================================================
+
+                               VIM Buffer History
+                                 Version 1.0.0
+                 Author: Dhruva Sagar <https://dhruvasagar.dev>
+              License: MIT <https://opensource.org/licenses/MIT/>
+
+================================================================================
+CONTENTS                                               *buffer-history-contents*
+
+     1. Introduction ....................... |buffer-history-introduction|
+     2. Commands ........................... |buffer-history-commands|
+     3. Mappings ........................... |buffer-history-mappings|
+     4. Contributing ....................... |buffer-history-contributing|
+     5. Reporting Issues ................... |buffer-history-issues|
+     6. Credits ............................ |buffer-history-credits|
+
+================================================================================
+INTRODUCTION                                       *buffer-history-introduction*
+
+    VIM Buffer History is a plugin that maintains a MRU Buffer Jump History per
+    window and provides a way for you to easily jump back and forward through it
+
+================================================================================
+COMMANDS                                               *buffer-history-commands*
+
+                                                            *:BufferHistoryList*
+                                             *buffer-history-:BufferHistoryList*
+    :BufferHistoryList
+        Lists the window local buffer history and highlights the current buffer
+        with an `*` within that list
+
+                                                            *:BufferHistoryBack*
+                                             *buffer-history-:BufferHistoryBack*
+    :BufferHistoryBack
+        Jumps to previously visited buffer in the window local buffer history
+
+                                                         *:BufferHistoryForward*
+                                          *buffer-history-:BufferHistoryForward*
+    :BufferHistoryForward
+        Jumps forward to the next visited buffer in the window local buffer
+        history if you're not already on the last one
+
+================================================================================
+MAPPINGS                                               *buffer-history-mappings*
+
+                                                            *buffer-history-gbl*
+                                                   *buffer-history-list-mapping*
+    `gbl`
+        This is mapped to `<Plug>(buffer-history-list)`, which is mapped to the
+        `:BufferHistoryList` command
+
+                                                            *buffer-histiry-gbp*
+                                                   *buffer-history-back-mapping*
+    `gbp`
+        This is mapped to `<Plug>(buffer-history-back)`, which is mapped to the
+        `:BufferHistoryBack` command
+
+                                                            *buffer-history-gbn*
+                                                *buffer-history-forward-mapping*
+    `gbn`
+        This is mapped to `<Plug>(buffer-history-forward)`, which is mapped to
+        the `:BufferHistoryForward` command
+
+================================================================================
+CONTRIBUTING                                       *buffer-history-contributing*
+
+    - Fork it
+    - Commit your changes and give your commit message some love
+    - Push to your fork on github
+    - Open a Pull Request to https://github.com/dhruvasagar/vim-buffer-history
+
+================================================================================
+REPORTING ISSUES                                         *buffer-history-issues*
+
+    You can report issues at
+    https://github.com/dhruvasagar/vim-buffer-history/issues
+
+================================================================================
+CREDITS                                                 *buffer-history-credits*
+
+    This plugin took inspiration from https://github.com/ton/vim-bufsurf, with
+    a cleaner and simpler approach to the problem.
